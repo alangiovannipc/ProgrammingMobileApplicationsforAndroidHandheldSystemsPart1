@@ -66,10 +66,10 @@ public class ActivityLoaderActivity extends Activity {
 		Log.i(TAG,"Entered startExplicitActivation()");
 		
 		// TODO - Create a new intent to launch the ExplicitlyLoadedActivity class
-		Intent explicitIntent = null;
+		Intent explicitIntent = new Intent(ActivityLoaderActivity.this,ExplicitlyLoadedActivity.class);
 		
 		// TODO - Start an Activity using that intent and the request code defined above
-		
+		startActivityForResult(explicitIntent,GET_TEXT_REQUEST_CODE);
         
         
 	}
