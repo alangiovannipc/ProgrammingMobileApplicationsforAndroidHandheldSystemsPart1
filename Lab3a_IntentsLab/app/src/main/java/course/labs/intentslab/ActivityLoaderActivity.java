@@ -107,7 +107,15 @@ public class ActivityLoaderActivity extends Activity {
 		// TODO - Process the result only if this method received both a
 		// RESULT_OK result code and a recognized request code
 		// If so, update the Textview showing the user-entered text.
+		if (requestCode == GET_TEXT_REQUEST_CODE) {
 
+			if (resultCode == RESULT_OK) {
+				String s = data.getStringExtra("editText");
+				if(null!=s && s.length() > 0){
+					mUserTextView.setText(s);
+				}
+			}
+		}
 	
     
     
